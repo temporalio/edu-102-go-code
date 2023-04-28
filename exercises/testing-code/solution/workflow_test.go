@@ -11,7 +11,6 @@ func TestSuccessfulCompleteFrenchTranslation(t *testing.T) {
 	s := testsuite.WorkflowTestSuite{}
 
 	env := s.NewTestWorkflowEnvironment()
-	env.RegisterActivity(SayHelloGoodbye)
 	env.RegisterActivity(TranslateTerm)
 
 	workflowInput := TranslationWorkflowInput{
