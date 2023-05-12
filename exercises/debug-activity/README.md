@@ -153,7 +153,7 @@ running `go test` again.
    Since Workers cache the code, the changes won't take effect until 
    they have been restarted. Do not press Ctrl-C in the terminal used
    to start the Workflow.
-2. Start both Workers by running `go run start/main.go` in their respective 
+2. Start both Workers by running `go run worker/main.go` in their respective 
    terminals.
 3. Click the **History** tab near the top of the detail page in the Web UI
 4. Click the toggle button labeled **Auto refresh** near the upper-right
