@@ -132,7 +132,7 @@ is `1`.
    called if the condition evaluates to `true`.
 3. Wrap the code you previously moved after the loop in a
    conditional statement that tests if `version` is equal to
-   `workflow.DefaultVersion`. This will handle the Activity for Workflow
+   `1`. This will handle the Activity for Workflow
    Executions started after the change.
 4. Change the duration of the `workflow.Sleep` statement at the
    bottom of the loop back to 3 seconds. This is unrelated to
