@@ -35,7 +35,7 @@ func PizzaWorkflow(ctx workflow.Context, order PizzaOrder) (OrderConfirmation, e
 	}
 
 	if order.IsDelivery && distance.Kilometers > 25 {
-		return OrderConfirmation{}, errors.New("Customer lives too far away for delivery")
+		return OrderConfirmation{}, errors.New("customer lives too far away for delivery")
 	}
 
 	// We use a short Timer duration here to avoid delaying the exercise
