@@ -124,8 +124,8 @@ continue with the following steps.
 2. Edit the `workflow_mock_test.go` file
 3. Add an import for `"github.com/stretchr/testify/mock"`
 4. Rename the test function to `TestSuccessfulTranslationWithMocks`
-5. Delete the two lines used to register the Activities. 
-   These are unnecessary in a Workflow test that uses mock
+5. Delete the line used to register the Activities. 
+   This is unnecessary in a Workflow test that uses mock
    objects for the Activity, since the *actual* Activity 
    Definition is never executed.
 6. Make the following changes between where the struct representing
