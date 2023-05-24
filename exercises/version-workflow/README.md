@@ -4,9 +4,9 @@ During this exercise, you will
 
 * Run a Workflow Execution that completes successfully 
 * Make and deploy a change that does not affect compatibility
-* Make and deploy a change that break compatibility, causing a non-deterministic error
+* Make and deploy a change that breaks compatibility, causing a non-deterministic error
 * Develop an automated test to check compatibility with previous executions
-* Using the `GetVersion` API to implement versioning for the Workflow
+* Use the `GetVersion` API to implement versioning for the Workflow
 
 Make your changes to the code in the `practice` subdirectory (look for 
 `TODO` comments that will guide you to where you should make changes to 
