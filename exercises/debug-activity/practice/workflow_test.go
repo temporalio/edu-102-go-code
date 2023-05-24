@@ -71,7 +71,7 @@ func TestFailedPizzaOrderCustomerOutsideDeliveryArea(t *testing.T) {
 	// wraps it in a Temporal-specific WorkflowExecutionError type, so we
 	// must unwrap this to retrieve the error returned in the Workflow code.
 	workflowErr := env.GetWorkflowError()
-	assert.EqualError(t, errors.Unwrap(workflowErr), "Customer lives too far away for delivery")
+	assert.EqualError(t, errors.Unwrap(workflowErr), "customer lives too far away for delivery")
 }
 
 func createPizzaOrderForTest() *PizzaOrder {
