@@ -11,7 +11,7 @@ import (
 
 // TODO Replace the last two input parameters with the struct you defined as input
 // TODO Replace the first output type (string) with the name of the struct you defined as output
-func TranslateTerm(ctx context.Context, languageCode string, inputTerm string) (string, error) {
+func TranslateTerm(ctx context.Context, inputTerm string, languageCode string) (string, error) {
 	// TODO Change the parameters used in these two calls to QueryEscape with
 	//      the appopriate fields from your struct
 	lang := url.QueryEscape(languageCode)
