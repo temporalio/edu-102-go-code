@@ -90,9 +90,7 @@ and responds by throwing the non-deterministic error you see.
 
 ## Part C: Use the Workflow Replayer to Test Compatibility
 
-1. In the Web UI, navigate to the detail page for the Workflow 
-   Execution that completed during Part A of this exercise.
-2. Edit the `workflow_test.go` file and uncomment the two import 
+1. Edit the `workflow_test.go` file and uncomment the two import 
    statements near the top of the file, then implement the following
    in the `TestReplayWorkflowHistoryFromFile` function:
    * Create the Workflow Replayer
@@ -100,8 +98,8 @@ and responds by throwing the non-deterministic error you see.
    * Replay the Event History in the JSON file you downloaded
    * Use `assert.NoError` to verify that replaying the history 
      does not return an error
-3. Save your changes
-4. Run `go test`. You should find that this fails, which confirms 
+2. Save your changes
+3. Run `go test`. You should find that this fails, which confirms 
    altering the execution order of the `SendThankYouToCustomer` 
    Activity) breaks compatibility. In the final part of this 
    exercise, you will use the `GetVersion` API to implement 
