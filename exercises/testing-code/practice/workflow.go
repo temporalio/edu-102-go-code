@@ -42,7 +42,7 @@ func SayHelloGoodbye(ctx workflow.Context, input TranslationWorkflowInput) (Tran
 	if err != nil {
 		return TranslationWorkflowOutput{}, err
 	}
-	goodbyeMessage := fmt.Sprintf("%s, %s", goodbyeResult.Translation, input.Name)
+	goodbyeMessage := fmt.Sprintf("%s; %s", goodbyeResult.Translation, input.Name)
 
 	output := TranslationWorkflowOutput{
 		HelloMessage:   helloMessage,
