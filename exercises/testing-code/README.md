@@ -1,4 +1,4 @@
-# Exercise 3: Testing the Translation Workflow
+# Exercise 2: Testing the Translation Workflow
 During this exercise, you will
 
 * Run a unit test provided for the `TranslateTerm` Activity
