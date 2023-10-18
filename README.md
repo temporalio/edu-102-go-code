@@ -17,7 +17,7 @@ Directory Name                     | Exercise
 ## Examples for Self-Study
 Directory Name                         | Description
 :------------------------------------- | :----------------------------------------------------------------------------------
-`samples/age-estimation`               | [Calls a remote API to estimate age pf a person given their name](samples/age-estimation)
+`samples/age-estimation`               | [Calls a remote API to estimate age of a person given their name](samples/age-estimation)
 `samples/using-structs-for-data`               | [Demonstrates how structs are passed in as input and output data](samples/using-structs-for-data)
 
 
