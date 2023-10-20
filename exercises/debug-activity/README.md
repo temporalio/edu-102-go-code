@@ -1,4 +1,4 @@
-# Exercise 4: Debugging and Fixing an Activity Failure
+# Exercise 3: Debugging and Fixing an Activity Failure
 During this exercise, you will
 
 * Start a Worker and run a basic Workflow for processing a pizza order

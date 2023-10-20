@@ -1,4 +1,4 @@
-# Exercise 2: Observing Durable Execution
+# Exercise 1: Observing Durable Execution
 During this exercise, you will
 
 * Create Workflow and Activity loggers 
