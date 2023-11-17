@@ -54,13 +54,14 @@ the complete version in the `solution` subdirectory.
 
 ## Part B: Deploy an Incompatible Change (without Versioning)
 
-1. This Workflow uses the `SendThankYouToCustomer` Activity to 
-   send a thank you message to the customer before charging 
+1. This Workflow uses the `SendThankYouToCustomer` Activity to
+   send a thank you message to the customer before charging
    them with the first loan payment, but this was a mistake.
-   This Activity should run after the last payment, so move the
-   five lines of code used to Activity execution (which begin 
-   with `var notifyConfirmation string`) from just before the 
-   loop to just after the loop.
+   This Activity should run after the last payment. To fix this,
+   edit the `workflow.go` file and move the five lines of code
+   (which begin with the `var notifyConfirmation string` statement)
+   related to that Activity from just before the loop to just
+   after it.
 2. Save your change and exit the editor.
 3. Restart the Worker by pressing Ctrl-C in the terminal 
    window where you started it and then running the 
