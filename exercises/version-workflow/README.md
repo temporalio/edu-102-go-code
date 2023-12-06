@@ -34,9 +34,9 @@ the complete version in the `solution` subdirectory.
    * NOTE: If you are running this exercise in GitPod, you may 
      be unable to download the file, due to the embedded browser
 	 used in that environment. In this case, run the following 
-	 command from the `practice`  directory `tctl wf show 
-	 --workflow_id loan-processing-workflow-customer-a100 
-	 --print_full > history_for_original_execution.json` to 
+	 command from the `practice`  directory `tctl wf show
+         --workflow_id loan-processing-workflow-customer-a100
+         --output_filename history_for_original_execution.json` to 
 	 retrieve a copy. 
 5. In the next section, you will make and deploy an incompatible 
    change, causing a non-deterministic error for an open execution.
