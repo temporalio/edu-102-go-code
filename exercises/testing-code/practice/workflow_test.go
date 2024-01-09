@@ -27,11 +27,11 @@ func TestSuccessfulCompleteFrenchTranslation(t *testing.T) {
 	var result TranslationWorkflowOutput
 	env.GetWorkflowResult(&result)
 
-	// TODO: Assert that the HelloMessage field in the
-	//       result is: Bonjour, Pierre
+	// Assert that the HelloMessage field in the
+	// result is: Bonjour, Pierre
 	assert.Equal(t, "Bonjour, Pierre", result.HelloMessage)
 
-	// TODO: Assert that the GoodbyeMessage field in the
-	//       result is: Au revoir, Pierre
+	// Assert that the GoodbyeMessage field in the
+	// result is: Au revoir, Pierre
 	assert.Equal(t, "Au revoir, Pierre", result.GoodbyeMessage)
 }
