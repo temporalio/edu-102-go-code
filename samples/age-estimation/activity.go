@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 )
@@ -27,7 +27,7 @@ func RetrieveEstimate(ctx context.Context, name string) (int, error) {
 	}
 
 	// read the HTTP response body into a string for parsing
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return -1, err
 	}
