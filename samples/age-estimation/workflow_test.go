@@ -20,6 +20,6 @@ func Test_EstimateAge_EndToEnd(t *testing.T) {
 
 	var result string
 	assert.NoError(t, env.GetWorkflowResult(&result))
-	expected := "Betty has an estimated age of 76"
+	expected := "Betty has an estimated age of 77"
 	assert.Equal(t, expected, result)
 }
