@@ -2,7 +2,6 @@ package translation
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -42,8 +41,8 @@ func TranslateTerm(ctx context.Context, input TranslationActivityInput) (Transla
 		// This means that we succcessfully called the service, but it could not
 		// perform the translation for some reason
 		logger.Error("Translation failed", "Status", status, "Message", content)
-		message := fmt.Sprintf("HTTP Error %d: %s", status, content)
-		return TranslationActivityOutput{}, errors.New(message)
+		return TranslationActivityOutput{},
+			fmt.Errorf("HTTP Error %d: %s", status, content)
 	}
 
 	logger.Debug("Translation successful", "Translation", content)
