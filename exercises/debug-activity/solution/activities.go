@@ -2,7 +2,6 @@ package pizza
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"time"
 
@@ -45,8 +44,8 @@ func SendBill(ctx context.Context, bill Bill) (OrderConfirmation, error) {
 
 	// reject invalid amounts before calling the payment processor
 	if chargeAmount < 0 {
-		errMsg := fmt.Sprintf("invalid charge amount: %d (must be above zero)", chargeAmount)
-		return OrderConfirmation{}, errors.New(errMsg)
+		return OrderConfirmation{},
+			fmt.Errorf("invalid charge amount: %d (< 1)", chargeAmount)
 	}
 
 	// pretend we called a payment processing service here :-)
