@@ -2,7 +2,6 @@ package translation
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -39,9 +38,8 @@ func TranslateTerm(ctx context.Context, inputTerm string, languageCode string) (
 	if status >= 400 {
 		// This means that we succcessfully called the service, but it could not
 		// perform the translation for some reason
-		message := fmt.Sprintf("HTTP Error %d: %s", status, content)
 		// TODO Return an empty output struct instead of an empty string
-		return "", errors.New(message)
+		return "", fmt.Errorf("HTTP Error %d: %s", status, content)
 	}
 
 	// TODO Replace 'content' below with the struct your using as output,
