@@ -10,9 +10,9 @@ It's important to remember that the example code used in this course was designe
 
 Directory Name                     | Exercise
 :--------------------------------- | :-------------------------------------------------------
-`exercises/durable-execution`      | [Exercise 2](exercises/durable-execution/README.md)
-`exercises/testing-code`           | [Exercise 3](exercises/testing-code/README.md)
-`exercises/debug-activity`         | [Exercise 4](exercises/debug-activity/README.md)
+`exercises/durable-execution`      | [Exercise 1](exercises/durable-execution/README.md)
+`exercises/testing-code`           | [Exercise 2](exercises/testing-code/README.md)
+`exercises/debug-activity`         | [Exercise 3](exercises/debug-activity/README.md)
 
 
 ## Examples for Self-Study
