@@ -29,11 +29,11 @@ tasks:
     command: |
       echo "Waiting for server...."
       gp ports await 7233 && gp ports await 8080 && gp preview $(gp url 8080)
-	  exit;
+      exit;
   - name: Display Exercise Instructions
     command: |
       gp open README.md
-	  exit;
+      exit;
   - name: Worker
     command: |
       # use the original file path so that this won't depend on the 
