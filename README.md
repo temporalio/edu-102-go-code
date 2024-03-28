@@ -10,7 +10,6 @@ It's important to remember that the example code used in this course was designe
 
 Directory Name                     | Exercise
 :--------------------------------- | :-------------------------------------------------------
-`exercises/using-structs`          | [Exercise 1](exercises/using-structs/README.md)
 `exercises/durable-execution`      | [Exercise 2](exercises/durable-execution/README.md)
 `exercises/testing-code`           | [Exercise 3](exercises/testing-code/README.md)
 `exercises/debug-activity`         | [Exercise 4](exercises/debug-activity/README.md)
@@ -20,6 +19,7 @@ Directory Name                     | Exercise
 Directory Name                         | Description
 :------------------------------------- | :----------------------------------------------------------------------------------
 `samples/age-estimation`               | [Calls a remote API to estimate a given name](samples/age-estimation)
+`samples/using-structs`                | [Demonstrates how to model inputs and outputs](samples/using-structs/README.md)
 
 
 ## Reference
