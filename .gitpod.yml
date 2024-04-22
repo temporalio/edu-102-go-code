@@ -34,6 +34,7 @@ tasks:
     command: |
       gp open README.md
       exit;
+    openMode: split-right
   - name: Worker
     command: |
       # use the original file path so that this won't depend on the 
@@ -56,6 +57,7 @@ tasks:
       clear
       echo "Translation Microservice running on this terminal"
       go run microservice/translation-service.go
+    openMode: split-right
 
 ports:
   - name: Temporal server's Frontend service
