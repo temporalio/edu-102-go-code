@@ -1,4 +1,4 @@
-image: temporalio/gitpod-edu:1.1
+image: temporalio/gitpod-edu:1.2
 tasks:
     # task links a bash configuration file to a location that is not
     # specific to this course (/etc/bash.bashrc sources it from there)
@@ -49,6 +49,13 @@ tasks:
       clear
       echo "Use this terminal to run commands.."
     openMode: split-right
+  - name: Microservice
+    command: |
+      source /workspace/edu-102-go-code/.bash.cfg
+      cd exercises/durable-execution/solution
+      clear
+      echo "Translation Microservice running on this terminal"
+      go run microservice/translation-service.go
 
 ports:
   - name: Temporal server's Frontend service
