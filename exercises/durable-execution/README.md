@@ -9,6 +9,17 @@ During this exercise, you will
 
 Make your changes to the code in the `practice` subdirectory (look for `TODO` comments that will guide you to where you should make changes to the code). If you need a hint or want to verify your changes, look at the complete version in the `solution` subdirectory.
 
+## Prerequisite: Ensure the Microservice is running
+
+If you haven't already started the Microservice in previous exercises, do so in
+a separate terminal. From either the `practice` or `solution` subdirectory for
+this exercise, run `go run microservice/translation-service.go`. The
+Microservice code does not change between the practice and solution examples.
+
+**Note: If you're using the Gitpod environment to run this exercise you can
+skip this step. An instance of the Microservice is already running in your
+environment**
+
 ## Part A: Add Logging to the Workflow Code
 
 1. Edit the `workflow.go` file
@@ -49,20 +60,19 @@ It is typical to run Temporal applications using two or more Worker processes. N
 
 Before proceeding, make sure that there are no Workers running for this or any previous exercise. Also, please read through all of these instructions before you begin, so that you'll know when and how to react.
 
-1. In one terminal, start the translation microservice by running `go run  microservice/translation-service.go`
-2. In another terminal, start the Worker by running `go run worker/main.go`
-3. In another terminal, start a second Worker by running `go run worker/main.go`
-4. In another terminal, execute the Workflow by running `go run start/main.go Tatiana sk` (replace `Tatiana` with your first name) 
-5. Observe the output in the terminal windows used by each worker. 
-6. 	As soon as you see a log message in one of the Worker terminals indicating that it has started the Timer, press Ctrl-C in that window to kill that Worker process.
-7. Switch to the terminal window for the other Worker process. Within a few seconds, you should observe new output, indicating that it has resumed execution of the Workflow.
-8. Once you see log output indicating that translation was successful, switch back to the terminal window where you started the Workflow. 
+1. In another terminal, start the Worker by running `go run worker/main.go`
+2. In another terminal, start a second Worker by running `go run worker/main.go`
+3. In another terminal, execute the Workflow by running `go run start/main.go Tatiana sk` (replace `Tatiana` with your first name) 
+4. Observe the output in the terminal windows used by each worker. 
+5. As soon as you see a log message in one of the Worker terminals indicating that it has started the Timer, press Ctrl-C in that window to kill that Worker process.
+6. Switch to the terminal window for the other Worker process. Within a few seconds, you should observe new output, indicating that it has resumed execution of the Workflow.
+7. Once you see log output indicating that translation was successful, switch back to the terminal window where you started the Workflow. 
 
 After the final step, you should see the translated Hello and Goodbye messages, which confirms that Workflow Execution completed successfully despite the original Worker being killed.
 
 Since you added logging code to the Workflow and Activity code, take a moment to look at what you see in the terminal windows for each Worker and think about what took place. You may also find it helpful to look at this Workflow Execution in the Web UI.
 
-The microservice for this exercise logs each successful translation, and if you look at its terminal window, you will see that the service only translated Hello (the first Activity) once, even though the Worker was killed after this translation took place. In other words, Temporal did not re-execute the completed Activity when it restored the state of the Workflow Execution. 
+The Microservice for this exercise logs each successful translation, and if you look at its terminal window, you will see that the service only translated Hello (the first Activity) once, even though the Worker was killed after this translation took place. In other words, Temporal did not re-execute the completed Activity when it restored the state of the Workflow Execution. 
 
 ### This is the end of the exercise.
 
