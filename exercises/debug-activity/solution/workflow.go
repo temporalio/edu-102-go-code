@@ -30,7 +30,7 @@ func PizzaWorkflow(ctx workflow.Context, order PizzaOrder) (OrderConfirmation, e
 	var distance Distance
 	err := workflow.ExecuteActivity(ctx, GetDistance, order.Address).Get(ctx, &distance)
 	if err != nil {
-		logger.Error("Unable get distance", "Error", err)
+		logger.Error("Unable to get distance", "Error", err)
 		return OrderConfirmation{}, err
 	}
 

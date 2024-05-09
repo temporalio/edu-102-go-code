@@ -35,7 +35,7 @@ func main() {
 	var result pizza.OrderConfirmation
 	err = we.Get(context.Background(), &result)
 	if err != nil {
-		log.Fatalln("Unable get workflow result", err)
+		log.Fatalln("Unable to get workflow result", err)
 	}
 
 	data, err := json.MarshalIndent(result, "", "  ")
