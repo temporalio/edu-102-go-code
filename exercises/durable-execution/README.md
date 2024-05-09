@@ -9,16 +9,16 @@ During this exercise, you will
 
 Make your changes to the code in the `practice` subdirectory (look for `TODO` comments that will guide you to where you should make changes to the code). If you need a hint or want to verify your changes, look at the complete version in the `solution` subdirectory.
 
-## Prerequisite: Ensure the Microservice is running
-
-If you haven't already started the Microservice in previous exercises, do so in
-a separate terminal. From either the `practice` or `solution` subdirectory for
-this exercise, run `go run microservice/translation-service.go`. The
-Microservice code does not change between the practice and solution examples.
+## Prerequisite: Ensure that the Microservice Is Running
 
 **Note: If you're using the Gitpod environment to run this exercise you can
-skip this step. An instance of the Microservice is already running in your
+skip this step. An instance of the microservice is already running in your
 environment**
+
+If you haven't already started the microservice in previous exercises, do so in
+a separate terminal. From either the `practice` or `solution` subdirectory for
+this exercise, run `go run microservice/translation-service.go`. The
+microservice code does not change between the practice and solution examples.
 
 ## Part A: Add Logging to the Workflow Code
 
@@ -72,7 +72,7 @@ After the final step, you should see the translated Hello and Goodbye messages, 
 
 Since you added logging code to the Workflow and Activity code, take a moment to look at what you see in the terminal windows for each Worker and think about what took place. You may also find it helpful to look at this Workflow Execution in the Web UI.
 
-The Microservice for this exercise logs each successful translation, and if you look at its terminal window, you will see that the service only translated Hello (the first Activity) once, even though the Worker was killed after this translation took place. In other words, Temporal did not re-execute the completed Activity when it restored the state of the Workflow Execution. 
+The microservice for this exercise logs each successful translation, and if you look at its terminal window, you will see that the service only translated Hello (the first Activity) once, even though the Worker was killed after this translation took place. In other words, Temporal did not re-execute the completed Activity when it restored the state of the Workflow Execution. 
 
 ### This is the end of the exercise.
 
