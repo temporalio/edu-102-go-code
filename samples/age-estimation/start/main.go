@@ -22,7 +22,7 @@ func main() {
 	defer c.Close()
 
 	options := client.StartWorkflowOptions{
-		ID:        example.WorkflowID,
+		ID:        "testing-estimate-age-example",
 		TaskQueue: example.TaskQueueName,
 	}
 

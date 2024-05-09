@@ -17,5 +17,5 @@ func Test_RetrieveEstimateBob(t *testing.T) {
 
 	var result int
 	assert.NoError(t, val.Get(&result))
-	assert.Equal(t, 69, result)
+	assert.Equal(t, 70, result)
 }

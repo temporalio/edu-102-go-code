@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	loanprocess "temporal102/exercises/version-workflow/solution"
+	translation "temporal102/samples/using-structs"
 
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
@@ -15,11 +15,10 @@ func main() {
 	}
 	defer c.Close()
 
-	w := worker.New(c, loanprocess.TaskQueueName, worker.Options{})
+	w := worker.New(c, translation.TaskQueueName, worker.Options{})
 
-	w.RegisterWorkflow(loanprocess.LoanProcessingWorkflow)
-	w.RegisterActivity(loanprocess.ChargeCustomer)
-	w.RegisterActivity(loanprocess.SendThankYouToCustomer)
+	w.RegisterWorkflow(translation.SayHelloGoodbye)
+	w.RegisterActivity(translation.TranslateTerm)
 
 	err = w.Run(worker.InterruptCh())
 	if err != nil {

@@ -12,17 +12,16 @@ For the exercises, make sure to run `temporal server start-dev --ui-port 8080 --
 
 Directory Name                     | Exercise
 :--------------------------------- | :-------------------------------------------------------
-`exercises/using-structs`          | [Exercise 1](exercises/using-structs/README.md)
-`exercises/durable-execution`      | [Exercise 2](exercises/durable-execution/README.md)
-`exercises/testing-code`           | [Exercise 3](exercises/testing-code/README.md)
-`exercises/debug-activity`         | [Exercise 4](exercises/debug-activity/README.md)
-`exercises/version-workflow`       | [Exercise 5](exercises/version-workflow/README.md)
+`exercises/durable-execution`      | [Exercise 1](exercises/durable-execution/README.md)
+`exercises/testing-code`           | [Exercise 2](exercises/testing-code/README.md)
+`exercises/debug-activity`         | [Exercise 3](exercises/debug-activity/README.md)
 
 
 ## Examples for Self-Study
 Directory Name                         | Description
 :------------------------------------- | :----------------------------------------------------------------------------------
-`samples/age-estimation`               | [Calls a remote API to estimate a given name](samples/age-estimation)
+`samples/age-estimation`               | [Calls a remote API to estimate a given name](samples/age-estimation/README.md)
+`samples/using-structs`                | [Demonstrates how to model inputs and outputs](samples/using-structs/README.md)
 
 
 ## Reference
@@ -37,9 +36,8 @@ The following links provide additional information that you may find helpful as 
 You can launch an exercise environment for this course in GitPod by 
 clicking the button below:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/temporalio/edu-102-go-code)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/temporalio/edu-102-go-code/tree/t102-go-maintenance-202403)
 
-Alternatively, you can follow 
-[these instructions](https://learn.temporal.io/getting_started/go/dev_environment/) to 
-set up your own Temporal Cluster with Docker Compose, which you can use as an 
-exercise environment.
+Alternatively, you can follow the instructions in the 
+"(Optional activity) Setting up a Local Development Environment"
+section in the course to set up a local development environment.

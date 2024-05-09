@@ -2,7 +2,6 @@ package translation
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -39,8 +38,8 @@ func TranslateTerm(ctx context.Context, input TranslationActivityInput) (Transla
 	if status >= 400 {
 		// This means that we succcessfully called the service, but it could not
 		// perform the translation for some reason
-		message := fmt.Sprintf("HTTP Error %d: %s", status, content)
-		return TranslationActivityOutput{}, errors.New(message)
+		return TranslationActivityOutput{},
+			fmt.Errorf("HTTP Error %d: %s", status, content)
 	}
 
 	// TODO  use the Debug level to log the successful translation and include the

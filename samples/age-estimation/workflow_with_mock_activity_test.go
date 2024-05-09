@@ -13,14 +13,14 @@ func Test_EstimateAge_WithMockActivity(t *testing.T) {
 	env := testSuite.NewTestWorkflowEnvironment()
 
 	// This mock represents the RetrieveEstimate Activity, and if 
-	// passed "Betty" as input, it will return 76 as output.
-	env.OnActivity(RetrieveEstimate, mock.Anything, "Betty").Return(76, nil)
+	// passed "Betty" as input, it will return 77 as output.
+	env.OnActivity(RetrieveEstimate, mock.Anything, "Betty").Return(77, nil)
 
 	env.ExecuteWorkflow(EstimateAge, "Betty")
 	assert.True(t, env.IsWorkflowCompleted())
 
 	var result string
 	assert.NoError(t, env.GetWorkflowResult(&result))
-	expected := "Betty has an estimated age of 76"
+	expected := "Betty has an estimated age of 77"
 	assert.Equal(t, expected, result)
 }
