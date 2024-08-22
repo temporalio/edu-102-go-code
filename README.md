@@ -36,7 +36,7 @@ The following links provide additional information that you may find helpful as 
 You can launch an exercise environment for this course in GitPod by 
 clicking the button below:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/temporalio/edu-102-go-code/tree/t102-go-maintenance-202403)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/temporalio/edu-102-go-code)
 
 Alternatively, you can follow the instructions in the 
 "(Optional activity) Setting up a Local Development Environment"
