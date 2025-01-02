@@ -33,13 +33,13 @@ func SayHelloGoodbye(ctx workflow.Context, input TranslationWorkflowInput) (Tran
 
 	// TODO: (Part C): log a message at the Debug level and then start a Timer for 10 seconds
 
-	// TODO Log, at the Debug level, a message about the Activity to be executed,
-	//      be sure to include the language code passed as input
 	goodbyeInput := TranslationActivityInput{
 		Term:         "Goodbye",
 		LanguageCode: input.LanguageCode,
 	}
 	var goodbyeResult TranslationActivityOutput
+	// TODO Log, at the Debug level, a message about the Activity to be executed,
+	//      be sure to include the language code passed as input
 	err = workflow.ExecuteActivity(ctx, TranslateTerm, goodbyeInput).Get(ctx, &goodbyeResult)
 	if err != nil {
 		return TranslationWorkflowOutput{}, err

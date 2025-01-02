@@ -1,4 +1,4 @@
-# Exercise 2: Observing Durable Execution
+# Exercise 1: Observing Durable Execution
 During this exercise, you will
 
 * Create Workflow and Activity loggers 
@@ -19,6 +19,10 @@ If you haven't already started the microservice in previous exercises, do so in
 a separate terminal. From either the `practice` or `solution` subdirectory for
 this exercise, run `go run microservice/translation-service.go`. The
 microservice code does not change between the practice and solution examples.
+
+## Prerequisite: Ensure that the Temporal Service Is Running
+
+1. Start the Temporal Service with `temporal server start-dev`
 
 ## Part A: Add Logging to the Workflow Code
 

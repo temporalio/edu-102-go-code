@@ -1,4 +1,4 @@
-# Exercise 4: Debugging and Fixing an Activity Failure
+# Exercise 3: Debugging and Fixing an Activity Failure
 During this exercise, you will
 
 * Start a Worker and run a basic Workflow for processing a pizza order
@@ -12,6 +12,9 @@ Make your changes to the code in the `practice` subdirectory (look for
 the code). If you need a hint or want to verify your changes, look at 
 the complete version in the `solution` subdirectory.
 
+## Prerequisite: Ensure that the Temporal Service Is Running
+
+1. Start the Temporal Service with `temporal server start-dev`
 
 ## Part A: Run the Workflow
 
@@ -167,7 +170,7 @@ in the Workflow code, rather than in an Activity, since that is typically
 not prone to failure and unlikely to affect whether the Workflow executes 
 in a deterministic manner. This exercise implemented it in the Activity, 
 since you can deploy a fix to Activity code without a risk of causing a 
-non-deterministic error. Later in this course, you'll learn how to safely 
+non-deterministic error. As you learned earlier in this course, there are also ways to safely
 deploy changes to Workflow Definitions.
 
 ### This is the end of the exercise.

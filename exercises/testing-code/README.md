@@ -1,4 +1,4 @@
-# Exercise 3: Testing the Translation Workflow
+# Exercise 2: Testing the Translation Workflow
 During this exercise, you will
 
 * Run a unit test provided for the `TranslateTerm` Activity
@@ -66,7 +66,7 @@ func TestFailedTranslateActivityBadLanguageCode(t *testing.T) {
 
 	// Assert that the error has the expected message, which identifies
 	// the invalid language code as the cause
-	assert.Equal(t, "HTTP Error 400: Unknown language code 'xq'\n", applicationErr.Message())
+	assert.Equal(t, "HTTP Error 400: Unknown language code \"xq\"", applicationErr.Message())
 }
 ```
 

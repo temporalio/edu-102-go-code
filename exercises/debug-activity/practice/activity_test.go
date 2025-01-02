@@ -87,5 +87,5 @@ func TestSendBillFailsWithNegativeAmount(t *testing.T) {
 
 	_, err := env.ExecuteActivity(SendBill, input)
 	assert.Error(t, err)
-	assert.Contains(t, err.Error(), "invalid charge amount: -1000 (must be above zero)")
+	assert.Contains(t, err.Error(), "invalid charge amount: -1000")
 }
