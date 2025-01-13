@@ -1,0 +1,61 @@
+name: Continuous Integration
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print build information
+        run: "echo head_ref: ${{ github.head_ref }}, ref: ${{ github.ref }}"
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Set up staticcheck
+        run: go install honnef.co/go/tools/cmd/staticcheck@latest 
+
+      - name: Set up workflowcheck
+        run: go install go.temporal.io/sdk/contrib/tools/workflowcheck@latest
+
+      - name: Staticcheck debug-activity
+        run: staticcheck .
+        working-directory: exercises/debug-activity/solution/worker
+
+      - name: Staticcheck durable-execution
+        run: staticcheck .
+        working-directory: exercises/durable-execution/solution/worker
+
+      - name: Staticcheck testing-code
+        run: staticcheck .
+        working-directory: exercises/testing-code/solution/worker
+
+      - name: Workflowcheck debug-activity
+        run: workflowcheck -show-pos .
+        working-directory: exercises/debug-activity/solution/worker
+
+      - name: Workflowcheck durable-execution
+        run: workflowcheck -show-pos .
+        working-directory: exercises/durable-execution/solution/worker
+
+      - name: Workflowcheck testing-code
+        run: workflowcheck -show-pos .
+        working-directory: exercises/testing-code/solution/worker
+
+      - name: Build debug-activity
+        run: go build
+        working-directory: exercises/debug-activity/solution/worker
+
+      - name: Build durable-execution
+        run: go build
+        working-directory: exercises/durable-execution/solution/worker
+
+      - name: Build testing-code
+        run: go build
+        working-directory: exercises/testing-code/solution/worker
