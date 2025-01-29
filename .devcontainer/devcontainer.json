@@ -1,0 +1,15 @@
+{
+    "image": "temporalio/gitpod-edu:1.4",
+    "customizations": {
+        "codespaces": {
+            "openFiles": [
+                "README.md"
+            ]
+        }
+    },
+    "forwardPorts": [8080, 7233, 9998],
+    "postStartCommand": "cd exercises/durable-execution/solution && nohup sh -c 'go run microservice/translation-service.go && temporal server start-dev --ui-port 8080' &",
+    "remoteEnv": {
+        "PROMPT_DIRTRIM": "2"
+    }
+}
