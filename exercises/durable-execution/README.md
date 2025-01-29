@@ -11,10 +11,6 @@ Make your changes to the code in the `practice` subdirectory (look for `TODO` co
 
 ## Prerequisite: Ensure that the Microservice Is Running
 
-**Note: If you're using the Gitpod environment to run this exercise you can
-skip this step. An instance of the microservice is already running in your
-environment**
-
 If you haven't already started the microservice in previous exercises, do so in
 a separate terminal. From either the `practice` or `solution` subdirectory for
 this exercise, run `go run microservice/translation-service.go`. The
