@@ -32,7 +32,7 @@ microservice code does not change between the practice and solution examples.
    1. It should mention that the Workflow function has been invoked
    2. It should also include a name-value pair for the name passed as input
 3. Before each call to Execute Activity, log a message at Debug level
-   1. This should should identify the word being translated
+   1. This should identify the word being translated
    2. It should also include a name-value pair for the language code passed as input
 4. Save your changes
 

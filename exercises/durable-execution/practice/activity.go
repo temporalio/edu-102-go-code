@@ -36,7 +36,7 @@ func TranslateTerm(ctx context.Context, input TranslationActivityInput) (Transla
 
 	status := resp.StatusCode
 	if status >= 400 {
-		// This means that we succcessfully called the service, but it could not
+		// This means that we successfully called the service, but it could not
 		// perform the translation for some reason
 		return TranslationActivityOutput{},
 			fmt.Errorf("HTTP Error %d: %s", status, content)
