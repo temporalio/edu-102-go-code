@@ -60,5 +60,5 @@ func TestFailedTranslateActivityBadLanguageCode(t *testing.T) {
 
 	var applicationErr *temporal.ApplicationError
 	assert.True(t, errors.As(err, &applicationErr))
-	assert.Equal(t, "HTTP Error 400: Unknown language code 'xq'\n", applicationErr.Message())
+	assert.Equal(t, "HTTP Error 400: Unknown language code \"xq\"", applicationErr.Message())
 }
