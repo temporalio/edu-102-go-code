@@ -57,7 +57,7 @@ func init() {
 		"sk": {
 			"hello":   "ahoj",
 			"goodbye": "zbohom",
-			"thanks":  "ďakujem koe",
+			"thanks":  "ďakujem",
 		},
 		"tr": {
 			"hello":   "merhaba",
